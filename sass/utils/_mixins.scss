@@ -1,0 +1,124 @@
+// Button mixin
+@mixin button-style($bg-color, $text-color: $white, $hover-bg: darken($bg-color, 10%)) {
+  background: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius-pill;
+  transition: all $transition-normal;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  
+  &:hover {
+    background: $hover-bg;
+    color: $text-color;
+    transform: translateY(-2px);
+  }
+}
+
+// Gradient button
+@mixin gradient-button($color1, $color2) {
+  background: linear-gradient(45deg, $color1, $color2);
+  color: $white;
+  padding: 18px 40px;
+  border-radius: $border-radius-pill;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all $transition-normal;
+  border: none;
+  box-shadow: 0 4px 15px rgba($color1, 0.2);
+  font-size: $font-size-xl;
+  
+  &:hover {
+    background: linear-gradient(45deg, $color2, $color1);
+    color: $white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba($color1, 0.3);
+  }
+}
+
+// Card style mixin
+@mixin card-style($padding: $spacing-lg) {
+  background-color: $bg-primary;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  padding: $padding;
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Flexbox center mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Section padding mixin
+@mixin section-padding {
+  padding: 60px 0;
+}
+
+// Container mixin
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+// Text shadow mixin
+@mixin text-shadow($color: rgba(0, 0, 0, 0.3)) {
+  text-shadow: 2px 2px 4px $color;
+}
+
+// Overlay mixin
+@mixin overlay($color: rgba(0, 0, 0, 0.7)) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color;
+}
+
+// Responsive breakpoints
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: #{$breakpoint-sm - 1}) { @content; }
+  }
+  @if $breakpoint == 'md' {
+    @media (max-width: #{$breakpoint-md - 1}) { @content; }
+  }
+  @if $breakpoint == 'lg' {
+    @media (max-width: #{$breakpoint-lg - 1}) { @content; }
+  }
+  @if $breakpoint == 'xl' {
+    @media (max-width: #{$breakpoint-xl - 1}) { @content; }
+  }
+}
+
+// Form input mixin
+@mixin form-input {
+  width: 100%;
+  padding: $spacing-sm;
+  border: 1px solid $border-light;
+  border-radius: $border-radius-sm;
+  transition: border-color $transition-fast;
+  
+  &:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  &.is-invalid {
+    border-color: $error-color;
+    box-shadow: 0 0 0 0.2rem rgba($error-color, 0.25);
+  }
+}

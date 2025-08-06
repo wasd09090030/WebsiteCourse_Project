@@ -1,0 +1,133 @@
+// Responsive design adjustments
+@include respond-to('lg') {
+  .navbar-nav .nav-link::after,
+  .navbar-nav .nav-link:hover::after {
+    display: none;
+  }
+
+  #products,
+  #features,
+  #about,
+  #faq-accordion,
+  #contact {
+    scroll-margin-top: 400px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-text p {
+    text-indent: 0;
+    font-size: $font-size-lg;
+    line-height: 1.6;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .about-text h2 {
+    font-size: $font-size-4xl;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .about-image img {
+    width: 100%;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+@include respond-to('md') {
+  .carousel {
+    height: 400px;
+  }
+  
+  .carousel-button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+
+    &.prev {
+      left: 20px;
+    }
+    
+    &.next {
+      right: 20px;
+    }
+  }
+  
+  .caption {
+    font-size: $font-size-xl;
+    padding: 20px 15px 15px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .product-card .card-img-top {
+    height: 200px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: $font-size-base;
+    line-height: 1.5;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .modal-body {
+    padding: $spacing-lg;
+  }
+  
+  .modal-title {
+    font-size: 1.3rem;
+  }
+  
+  .feature-list li {
+    font-size: 0.95rem;
+  }
+}
+
+@include respond-to('sm') {
+  .carousel {
+    height: 300px;
+  }
+  
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+
+    &.prev {
+      left: 10px;
+    }
+    
+    &.next {
+      right: 10px;
+    }
+  }
+  
+  .caption {
+    font-size: $font-size-lg;
+    padding: 15px 10px 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+// Very small screens
+@media (max-width: 400px) {
+  .cart-sidebar {
+    width: 100%;
+  }
+}

@@ -1,0 +1,68 @@
+// Header and Navigation styles
+.navbar {
+  background: linear-gradient(to right, $white, $primary-color);
+  box-shadow: $shadow-sm;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  .navbar-nav .nav-link {
+    color: $secondary-color;
+    font-weight: 400;
+    padding: 0.85rem 1.1rem;
+    margin: 0 0.25rem;
+    position: relative;
+    transition: color $transition-normal, background-color $transition-normal;
+    font-size: $font-size-lg;
+    border-radius: $border-radius-sm;
+
+    &:hover {
+      color: $accent-color;
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2.5px;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $accent-color;
+      transition: width $transition-normal, background-color $transition-normal;
+      border-radius: 2px;
+    }
+
+    &:hover::after {
+      width: 60%;
+    }
+  }
+}
+
+.navbar-light .navbar-toggler {
+  border-color: rgba($text-primary, 0.15);
+  padding: 0.35rem 0.65rem;
+}
+
+// Logo styles
+#logo {
+  margin-left: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+}
+
+#chinalogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 50px;
+  background-color: #aaaaaa;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}

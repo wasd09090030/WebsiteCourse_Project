@@ -1,0 +1,26 @@
+// Video demo section
+.demo {
+  text-align: center;
+  background-color: $bg-primary;
+  @include section-padding;
+
+  h2 {
+    @include container;
+    margin-bottom: 40px;
+  }
+}
+
+.video-container {
+  @include container;
+  margin-top: 30px;
+  box-shadow: $shadow-lg;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    height: 600px;
+    display: block;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,25 @@
+// Import utilities first
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Import base styles
+@import 'utils/base';
+
+// Import layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Import components
+@import 'components/hero';
+@import 'components/products';
+@import 'components/features';
+@import 'components/video';
+@import 'components/about';
+@import 'components/contact';
+@import 'components/faq';
+@import 'components/modals';
+@import 'components/cart';
+@import 'components/buttons';
+
+// Import responsive styles
+@import 'utils/responsive';

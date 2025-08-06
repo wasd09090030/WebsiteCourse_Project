@@ -1,0 +1,81 @@
+// Global reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  line-height: 1.6;
+  color: $text-secondary;
+  background-color: $bg-light;
+}
+
+// Typography
+h1, h2, h3, h4 {
+  margin-bottom: 20px;
+  color: $text-primary;
+}
+
+h1 {
+  font-size: $font-size-5xl;
+}
+
+h2 {
+  font-size: $font-size-4xl;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $blue-color;
+  transition: color $transition-normal;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+// Sections
+section {
+  @include section-padding;
+}
+
+// Scroll margin for smooth scrolling
+#products,
+#features,
+#about,
+#faq-accordion,
+#contact {
+  scroll-margin-top: $header-height;
+}
+
+// Button base styles
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// Form elements
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  @include form-input;
+}

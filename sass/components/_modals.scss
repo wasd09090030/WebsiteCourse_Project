@@ -1,0 +1,86 @@
+// Modal styles
+.modal-content {
+  border-radius: $border-radius-xl;
+  border: none;
+  box-shadow: $shadow-lg;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: $border-radius-xl $border-radius-xl 0 0;
+  padding: $spacing-lg;
+}
+
+.modal-title {
+  color: $text-primary;
+  font-weight: 600;
+  font-size: $font-size-3xl;
+}
+
+.modal-body {
+  padding: $spacing-xl;
+}
+
+.modal-footer {
+  border-top: 1px solid #e9ecef;
+  padding: $spacing-lg;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: $spacing-lg 0;
+
+  li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    color: $text-light;
+
+    i {
+      color: $success-color;
+      margin-right: 0.75rem;
+    }
+  }
+}
+
+.specifications {
+  margin-top: $spacing-xl;
+
+  h5 {
+    color: $text-primary;
+    margin-bottom: $spacing-md;
+    font-weight: 600;
+  }
+
+  .table {
+    margin-bottom: 0;
+
+    td {
+      padding: 0.5rem;
+      border: none;
+
+      &:first-child {
+        font-weight: 500;
+        color: $text-muted;
+        width: 40%;
+      }
+    }
+  }
+}
+
+.modal .btn-primary {
+  @include button-style($blue-color);
+  font-weight: 500;
+}
+
+.modal .btn-secondary {
+  @include button-style(#6c757d);
+  font-weight: 500;
+
+  &:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+  }
+}

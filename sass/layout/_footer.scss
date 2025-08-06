@@ -1,0 +1,113 @@
+// Footer styles
+footer {
+  background: linear-gradient(to right, $primary-color, $primary-dark);
+  color: $white;
+  padding: 40px 0 20px;
+  font-size: $font-size-sm;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include container;
+  gap: 20px;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+.footer-links,
+.footer-social,
+.footer-newsletter {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+
+.footer-social h4,
+.footer-newsletter h4 {
+  color: $white;
+  margin-bottom: 15px;
+  font-size: $font-size-xl;
+}
+
+.footer-links {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a,
+  .footer-social a {
+    color: rgba($white, 0.8);
+    transition: color $transition-normal;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-newsletter {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+
+  p {
+    color: rgba($white, 0.8);
+    margin-bottom: 20px;
+    font-size: $font-size-sm;
+    line-height: 1.4;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba($white, 0.2);
+    border-radius: $border-radius;
+    background: rgba($white, 0.1);
+    color: $white;
+    font-size: $font-size-sm;
+    transition: all $transition-normal;
+
+    &:focus {
+      border: 2px solid $white;
+      background: rgba($white, 0.15);
+    }
+
+    &::placeholder {
+      color: rgba($white, 0.6);
+    }
+  }
+
+  .subscribe-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: $white;
+    color: $primary-color;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all $transition-normal;
+
+    &:hover {
+      background: rgba($white, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

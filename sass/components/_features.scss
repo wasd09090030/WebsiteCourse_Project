@@ -1,0 +1,41 @@
+// Features section
+.features {
+  background-color: $bg-secondary;
+  @include section-padding;
+
+  h2 {
+    @include container;
+    margin-bottom: 40px;
+  }
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+  @include container;
+  gap: 30px;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 280px;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: $bg-primary;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform $transition-normal;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    border-radius: $border-radius-lg;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+}
